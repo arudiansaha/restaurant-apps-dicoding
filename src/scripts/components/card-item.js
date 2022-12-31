@@ -29,12 +29,24 @@ class CardItem extends HTMLElement {
     `;
 
     const ratingElement = this.querySelector('.card__rating');
-    const scoreClass = rating < 2 ? 'bad' : rating < 3.5 ? 'mid' : 'good';
-    ratingElement.classList.add(scoreClass);
-    const ratingColor = window.getComputedStyle(ratingElement).backgroundColor;
-    const gradient = `background: conic-gradient(${ratingColor} (100 / ${rating}), transparent 0 100%)`;
-    ratingElement.setAttribute('style', gradient);
-    ratingElement.innerHTML = `<span>${rating}</span>`;
+    const percentage = (rating / 5.0) * 100;
+
+    const ratingClass = (rating < 2)
+      ? 'bad' 
+      : (rating < 3.5) 
+        ? 'mid' 
+        : 'good';
+
+    /* window.getComputedStyle didn't work, and this alt way for now :) */
+    const color = (ratingClass === 'bad')
+      ? '#e74c3c'
+      : (ratingClass === 'mid')
+        ? '#f1c40f' 
+        : '#27ae60'; 
+
+    ratingElement.classList.add(ratingClass);
+    ratingElement.setAttribute('style', `background: conic-gradient(${color} ${percentage}%, #ad9f92 0 100%)`);
+    ratingElement.innerHTML = `<p>${rating}</p>`;
   }
 }
 

@@ -1,14 +1,24 @@
 .app-bar {
-  z-index: 20;
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-white);
 }
 
 .app-bar__title {
-  margin-inline: auto;
+  z-index: 20;
+  width: 100%;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 900;
   line-height: 2rem;
+  text-align: center;
+  background-color: inherit;
+}
+
+.app-bar__menu-wrapper {
+  z-index: 20;
+  width: 100%;
+  background-color: inherit;
 }
 
 .app-bar__menu {
@@ -18,20 +28,17 @@
   margin-inline: auto;
   padding: 0.25rem;
   border: none;
-  background-color: unset;
+  background-color: inherit;
 }
 
 .app-bar__navigation {
-  position: relative;
   z-index: 10;
-  overflow: hidden;
-  transform: translateY(-1.75rem);
-  transition: all 800ms ease-in-out;
+  transform: translateY(-9rem);
+  transition: transform 800ms ease-in-out;
 }
 
 .app-bar__navigation.active {
   transform: translateY(0);
-  overflow: visible;
 }
 
 .app-bar__list {
@@ -42,6 +49,7 @@
   align-items: center;
   row-gap: 1rem;
   width: 100%;
+  padding-block: 1rem;
   list-style: none;
   background-color: var(--color-white);
 }
@@ -54,18 +62,20 @@
 @media screen and (min-width: 768px) {
   .app-bar {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 95%;
+    width: min(100% - 3rem, 90rem);
     margin-inline: auto;
     padding-block: 1rem;
   }
 
   .app-bar__title {
+    max-width: fit-content;
     margin-inline: 0;
   }
 
   .app-bar__menu {
+    width: auto;
     display: none;
   }
 
@@ -79,6 +89,8 @@
   .app-bar__list {
     position: static;
     flex-direction: row;
-    column-gap: 1.25rem;
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    width: max-content;
+    padding-block: unset;
   }
 }

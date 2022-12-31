@@ -14,6 +14,7 @@
 .explore__card {
   display: grid;
   gap: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .card {
@@ -70,7 +71,7 @@
   overflow: hidden;
 }
 
-.card__rating span {
+.card__rating p {
   position: relative;
   display: flex;
   font-weight: 700;

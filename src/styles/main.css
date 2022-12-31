@@ -30,6 +30,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   font-family: var(--font-serif);
   font-size: 1rem;
@@ -40,6 +42,16 @@ body {
 
 header {
   background-color: var(--color-white);
+}
+
+footer {
+  margin-top: auto;
+  padding-block: 2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--color-zeus);
+  color: var(--color-white);
 }
 
 h1,
