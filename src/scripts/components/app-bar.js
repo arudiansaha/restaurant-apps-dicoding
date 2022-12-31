@@ -1,5 +1,6 @@
 class AppBar extends HTMLElement {
-  connectedCallback() {
+  set menuEvent(event) {
+    this._menuEvent = event;
     this.render();
   }
 
@@ -21,9 +22,7 @@ class AppBar extends HTMLElement {
       </nav>
     `;
 
-    this.querySelector('.app-bar__menu').addEventListener('click', () => {
-      this.querySelector('.app-bar__navigation').classList.toggle('active');
-    });
+    this.querySelector('.app-bar__menu').addEventListener('click', this._menuEvent);
   }
 }
 

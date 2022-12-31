@@ -18,7 +18,7 @@
   top: 35%;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 5;
   width: min(100% - 3rem, 64rem);
   margin-inline: auto;
   font-size: clamp(1.5rem, 4vw, 5rem);
@@ -30,6 +30,7 @@
 
 @media screen and (min-width: 1200px) {
   .hero__image {
+    height: 600px;
     min-width: 1000px;
   }
 }

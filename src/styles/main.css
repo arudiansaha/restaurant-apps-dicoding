@@ -1,11 +1,13 @@
 @import url('./app-bar.css');
 @import url('./hero-image.css');
+@import url('./card.css');
 
 :root {
   --font-sans: 'Raleway', sans-serif;
   --font-serif: 'Lora', serif;
   --color-zeus: #1d1917;
   --color-white: #ffffff;
+  --color-espresso: #633119;
 }
 
 /* CSS Reset */
@@ -32,7 +34,8 @@ body {
   font-family: var(--font-serif);
   font-size: 1rem;
   line-height: 1.5;
-  color: #1d1917;
+  background-color: var(--color-white);
+  color: var(--color-zeus);
 }
 
 header {
@@ -44,6 +47,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-sans);
+  font-weight: 700;
 }
 
 a {
