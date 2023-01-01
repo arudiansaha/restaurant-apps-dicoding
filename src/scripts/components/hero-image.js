@@ -6,7 +6,7 @@ class HeroImage extends HTMLElement {
   render() {
     this.setAttribute('class', 'hero');
     this.innerHTML = `
-      <img src="./images/heros/hero-image_2.jpg" alt="" class="hero__image">
+      <img src="./images/heros/hero-image_2.jpg" alt="" class="hero__image" loading="lazy">
     `;
   }
 }

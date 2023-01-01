@@ -17,7 +17,7 @@ class CardItem extends HTMLElement {
     this.innerHTML = `
       <a href="#">
         <div class="card__cover">
-          <img src="${pictureId}" alt="">
+          <img src="${pictureId}" alt="" loading="lazy">
           <div class="card__review">
             <p class="card__label">${city}</p>
             <div aria-label="Restaurant rating ${rating}" class="card__rating"></div>
