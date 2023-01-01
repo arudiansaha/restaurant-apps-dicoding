@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -47,7 +48,7 @@ header {
 footer {
   margin-top: auto;
   padding-block: 2rem;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 700;
   text-align: center;
   background-color: var(--color-zeus);
@@ -70,4 +71,20 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  z-index: 90;
+  padding-block: 0.5em;
+  padding-inline: 1.25em;
+  font-weight: 700;
+  background-color: var(--color-espresso);
+  color: var(--color-white);
+}
+
+.skip-link:focus {
+  top: 0;
 }

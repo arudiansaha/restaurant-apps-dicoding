@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   display: block;
   height: 100%;
   width: 100%;
@@ -10,22 +9,6 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.5);
-}
-
-.hero__title {
-  position: absolute;
-  top: 35%;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  width: min(100% - 3rem, 64rem);
-  margin-inline: auto;
-  font-size: clamp(1.5rem, 4vw, 5rem);
-  font-weight: 900;
-  line-height: 1.25;
-  text-align: center;
-  color: white;
 }
 
 @media screen and (min-width: 1200px) {

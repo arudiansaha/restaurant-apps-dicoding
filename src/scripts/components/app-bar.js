@@ -19,7 +19,7 @@ class AppBar extends HTMLElement {
         <ul class="app-bar__list">
           <li class="app-bar__item"><a href="/">Home</a></li>
           <li class="app-bar__item"><a href="#">Favorite</a></li>
-          <li class="app-bar__item"><a href="#">About Us</a></li>
+          <li class="app-bar__item"><a href="https://www.linkedin.com/in/ky-ardiansyah">About Us</a></li>
         </ul>
       </nav>
     `;

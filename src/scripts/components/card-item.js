@@ -15,17 +15,19 @@ class CardItem extends HTMLElement {
 
     this.setAttribute('class', 'card');
     this.innerHTML = `
-      <div class="card__cover">
-        <img src="${pictureId}" alt="">
-        <div class="card__review">
-          <p class="card__label">${city}</p>
-          <div class="card__rating"></div>
+      <a href="#">
+        <div class="card__cover">
+          <img src="${pictureId}" alt="">
+          <div class="card__review">
+            <p class="card__label">${city}</p>
+            <div aria-label="Restaurant rating ${rating}" class="card__rating"></div>
+          </div>
         </div>
-      </div>
-      <div class="card__description">
-        <h3 class="card__name">${name}</h3>
-        <p class="card__text">${description}</p>
-      </div>
+        <div class="card__description">
+          <h3 class="card__name">${name}</h3>
+          <p class="card__text">${description}</p>
+        </div>
+      </a>
     `;
 
     const ratingElement = this.querySelector('.card__rating');
